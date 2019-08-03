@@ -84,7 +84,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><h3 id="一、安装-node-和-npm"><a href="#一、安装-node-和-npm" class="headerlink" title="一、安装 node 和 npm"></a>一、安装 node 和 npm</h3><h4 id="检查-node-版本"><a href="#检查-node-版本" class="headerlink" title="检查 node 版本"></a>检查 node 版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+        <h1 id="个人博客部署（基于-Hexo）"><a href="#个人博客部署（基于-Hexo）" class="headerlink" title="个人博客部署（基于 Hexo）"></a>个人博客部署（基于 Hexo）</h1><h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><h3 id="一、安装-node-和-npm"><a href="#一、安装-node-和-npm" class="headerlink" title="一、安装 node 和 npm"></a>一、安装 node 和 npm</h3><h4 id="检查-node-版本"><a href="#检查-node-版本" class="headerlink" title="检查 node 版本"></a>检查 node 版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 
 <h4 id="检查-npm-版本"><a href="#检查-npm-版本" class="headerlink" title="检查 npm 版本"></a>检查 npm 版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
@@ -123,11 +123,7 @@
 
 <h4 id="使用-hexo-初始化博客，查看生成的文件，启动博客"><a href="#使用-hexo-初始化博客，查看生成的文件，启动博客" class="headerlink" title="使用 hexo 初始化博客，查看生成的文件，启动博客"></a>使用 hexo 初始化博客，查看生成的文件，启动博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo init</span><br><span class="line">ls -l</span><br><span class="line">hexo s (此命令通常用来预览)</span><br><span class="line">ctrl c 断开</span><br></pre></td></tr></table></figure>
 
-<pre><code>(http://localhost:4000 默认在本地 4000 端口启动博客)</code></pre><h4 id="编辑博客"><a href="#编辑博客" class="headerlink" title="编辑博客"></a>编辑博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/_posts</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 个人博客部署.md</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i</span><br></pre></td></tr></table></figure>
+<pre><code>(http://localhost:4000 默认在本地 4000 端口启动博客)</code></pre><h4 id="编辑博客"><a href="#编辑博客" class="headerlink" title="编辑博客"></a>编辑博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/_posts</span><br><span class="line">vim 个人博客部署.md</span><br><span class="line">i</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>退出编辑：</li>
@@ -137,19 +133,25 @@
 <ul>
 <li>退回两层文件夹：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../..</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../..</span><br><span class="line">hexo clean 清理</span><br><span class="line">生成博客 hexo g</span><br><span class="line">重新启动 hexo s</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean 清理</span><br></pre></td></tr></table></figure>
+<h3 id="在-GitHub-新建仓库"><a href="#在-GitHub-新建仓库" class="headerlink" title="在 GitHub 新建仓库"></a>在 GitHub 新建仓库</h3><p>仓库名 Username.github.io<br>权限 public</p>
+<h3 id="安装部署工具"><a href="#安装部署工具" class="headerlink" title="安装部署工具"></a>安装部署工具</h3><h4 id="cd-到-blog-文件夹，输入以下安装命令"><a href="#cd-到-blog-文件夹，输入以下安装命令" class="headerlink" title="cd 到 blog 文件夹，输入以下安装命令"></a>cd 到 blog 文件夹，输入以下安装命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成博客 hexo g</span><br></pre></td></tr></table></figure>
+<h4 id="在-config-yml-文件中配置-type、repo、branch-三个信息"><a href="#在-config-yml-文件中配置-type、repo、branch-三个信息" class="headerlink" title="在_config.yml 文件中配置 type、repo、branch 三个信息"></a>在_config.yml 文件中配置 type、repo、branch 三个信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">重新启动 hexo s</span><br></pre></td></tr></table></figure>
+<p>拖到最下边</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line">repo: https://github.com/LELOLE/LELOLE.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
 
+<p>注意：‘：’ 后面的空格不能省略；repo 链接中 ‘.git’ 不能丢</p>
+<h4 id="部署本地博客到远端-Github"><a href="#部署本地博客到远端-Github" class="headerlink" title="部署本地博客到远端 Github"></a>部署本地博客到远端 Github</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>注意：此处需要输对账号密码，如果报错信息 401， 则账号密码输入有问题</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/18/个人博客部署/" data-id="cjyvq8mz30000fbml2ly7rpv6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/18/个人博客部署/" data-id="cjyvql5lc0000kxmlgkzo1t0x" class="article-share-link">Share</a>
       
       
     </footer>
